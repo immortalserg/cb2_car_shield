@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "FH12-40S-0.5SV(55)")(type Legacy)(uri "${IMMGIT}/FH12-40S-0.5SV(55).lib")(options "")(descr ""))
+  (lib (name cb2_car-rescue)(type Legacy)(uri ${KIPRJMOD}/cb2_car-rescue.lib)(options "")(descr ""))
+)

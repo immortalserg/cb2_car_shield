@@ -1,0 +1,155 @@
+EESchema Schematic File Version 4
+LIBS:cb2_car-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:LM2596S-5 U3
+U 1 1 5C03B373
+P 2800 2250
+F 0 "U3" H 2800 2617 50  0000 C CNN
+F 1 "LM2596S-5" H 2800 2526 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 2850 2000 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 2800 2250 50  0001 C CNN
+	1    2800 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L connectors:HEADER-1x02 J7
+U 1 1 5C03BE74
+P 1550 2200
+F 0 "J7" H 1517 1938 60  0000 C CNB
+F 1 "HEADER-1x02" H 1517 2029 40  0000 C CNN
+F 2 "w_conn_mkds:mkds_1,5-2" H 1550 2200 60  0001 C CNN
+F 3 "" H 1550 2200 60  0001 C CNN
+F 4 "-" H 1500 2450 40  0001 L BNN "Part"
+F 5 "Connector" H 1500 2550 40  0001 L BNN "Family"
+	1    1550 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2300 2150 1950 2150
+Wire Wire Line
+	1700 2250 1850 2250
+Wire Wire Line
+	1850 2250 1850 2550
+Wire Wire Line
+	1850 2550 1950 2550
+$Comp
+L semi-diode-generic:SS34 D2
+U 1 1 5C03D1CB
+P 3500 2450
+F 0 "D2" H 3420 2404 50  0000 R CNN
+F 1 "SS34" H 3420 2495 50  0000 R CNN
+F 2 "IPC7351-Nominal:DIOM7959X265" H 3500 2300 50  0001 C CNN
+F 3 "" H 3500 2450 60  0000 C CNN
+F 4 "SCHOTTKY SS34" H 3500 2200 60  0001 C CNN "BOM"
+	1    3500 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 2550 2800 2550
+Connection ~ 2800 2550
+Wire Wire Line
+	3500 2350 3300 2350
+Wire Wire Line
+	2300 2350 2300 2550
+Connection ~ 2300 2550
+Wire Wire Line
+	2300 2550 2800 2550
+$Comp
+L imm_lib:L L1
+U 1 1 5C03E204
+P 3850 2350
+F 0 "L1" V 4016 2350 39  0000 C CNN
+F 1 "33 uH" V 3941 2350 39  0000 C CNN
+F 2 "imm:CD54" V 3700 2200 50  0001 C CNN
+F 3 "" H 3800 2350 50  0001 C CNN
+	1    3850 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 2350 3500 2350
+Connection ~ 3500 2350
+Wire Wire Line
+	3300 2150 4000 2150
+Wire Wire Line
+	4000 2150 4000 2350
+$Comp
+L Device:CP C2
+U 1 1 5C03FB74
+P 4000 2500
+F 0 "C2" H 4118 2546 50  0000 L CNN
+F 1 "220 uF" H 4118 2455 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 4038 2350 50  0001 C CNN
+F 3 "~" H 4000 2500 50  0001 C CNN
+	1    4000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5C0402F0
+P 1950 2300
+F 0 "C1" H 2068 2346 50  0000 L CNN
+F 1 "680 uF" H 2068 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 1988 2150 50  0001 C CNN
+F 3 "~" H 1950 2300 50  0001 C CNN
+	1    1950 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 2150
+Wire Wire Line
+	1950 2150 1700 2150
+Wire Wire Line
+	1950 2450 1950 2550
+Connection ~ 1950 2550
+Wire Wire Line
+	1950 2550 2300 2550
+Connection ~ 4000 2350
+Wire Wire Line
+	4000 2650 3500 2650
+Wire Wire Line
+	3500 2650 3500 2550
+Connection ~ 3500 2550
+Text GLabel 4000 2650 2    50   Input ~ 0
+GND
+Text GLabel 4000 2150 2    50   Input ~ 0
++5V
+$Comp
+L kicad_immlib:MOUDLE-GPS-NEO-6M(24P-16X12.2MM) U4
+U 1 1 5C044C28
+P 7400 2550
+F 0 "U4" H 7400 3367 50  0000 C CNN
+F 1 "MOUDLE-GPS-NEO-6M(24P-16X12.2MM)" H 7400 3276 50  0000 C CNN
+F 2 "immgit:Neo_GPS24P-SMD-1.1-16X12.2MM" H 7400 2550 50  0001 L BNN
+F 3 "None" H 7400 2550 50  0001 L BNN
+F 4 "None" H 7400 2550 50  0001 L BNN "Поле4"
+F 5 "NEO-6M-GPS" H 7400 2550 50  0001 L BNN "Поле5"
+F 6 "Unavailable" H 7400 2550 50  0001 L BNN "Поле6"
+F 7 "u-blox" H 7400 2550 50  0001 L BNN "Поле7"
+F 8 "SMD GPS Module;" H 7400 2550 50  0001 L BNN "Поле8"
+	1    7400 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 7950 2400 2    50   Input ~ 0
+RX
+Text GLabel 7950 2300 2    50   Input ~ 0
+TX
+Text GLabel 6850 3100 0    50   Input ~ 0
+GND
+Text GLabel 6850 2900 0    50   Input ~ 0
+GND
+Text GLabel 7950 3100 2    50   Input ~ 0
+GND
+$EndSCHEMATC
